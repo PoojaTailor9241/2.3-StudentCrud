@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Edit Student
+    body 
+        center 
+            form(action="/student/edit", method="post" enctype="multipart/form-data") 
+                input(type="hidden", name="id" value=`${List._id}`)
+                table 
+                    tr 
+                        th Name 
+                        td 
+                            input(type="text", name="name" value=`${List.name}`)
+                    tr 
+                        th Age 
+                        td 
+                            input(type="number", name="age" value=`${List.age}`)
+                    tr 
+                        th Email 
+                        td 
+                            input(type="text", name="name" value=`${List.email}`)
+                    tr 
+                        td 
+                        td 
+                            input(type="submit", value="Edit")

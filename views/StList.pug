@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Student Display
+    body
+        center 
+            br
+            br
+            a(href="/student/add") Add New 
+            br 
+            table 
+                tr 
+                    th Name 
+                    th Age 
+                    th Email 
+                    th Action
+                if data == true 
+                    for st in StudentList
+                        tr 
+                            td= st.name
+                            td= st.age 
+                            td= st.email 
+                            td  
+                                a(href=`/student/delete/${st._id}`) Delete 
+                                a(href=`/student/${st._id}`) Edit 
